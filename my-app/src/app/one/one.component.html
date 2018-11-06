@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+<div class="col-lg-4">
+<h2>Frauen Details</h2>
+who the hell is {{hero.name}}
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+<div><span>place: </span>{{hero.place}}</div>
+
+<div>
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name">
+  </label>
+</div>
+</div>
+<div class="selection col-lg-4">
+  <h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor='let hero of heroes' (click)= "onSelect(hero)" [class.selected]="hero === selectedHero">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<!-- hero details on click -->
+
+</div>
+<div class="onselect col-lg-4"  *ngIf="selectedHero">
+    <div class="container">
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name"><br>
+      place:
+      <input [(ngModel)]="selectedHero.place" placeholder="place">
+  
+    </label>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+<input #myInput type="text">
+<button (click)=getMessage(myInput.value)>Get</button>
+<input [(ngModel)]="color">
+<div [ngSwitch]='color'>
+  <div *ngSwitchCase="'red'">You pick red</div>
+  <div *ngSwitchCase="'green'">You pick green</div>
+  <div *ngSwitchCase="'blue'">You pick blue</div>
+  <div *ngSwitchDefault>pick again</div>
+
+</div>
+<!-- onclick end -->
+<!-- <app-one-details [hero]="selectedHero"></app-one-details> -->
+<button (click)="fireEvent()">Click</button>
+{{date| date:'medium'}}
+{{errorMsg}}
+<h1>{{message}}</h1>

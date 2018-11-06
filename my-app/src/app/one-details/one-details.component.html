@@ -1,0 +1,187 @@
+<!-- <div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedHero.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedHero.name" placeholder="name">
+        <input [(ngModel)]="selectedHero.place" placeholder="place">
+    
+      </label>
+    </div>
+    </div> -->
+<ul class="items">
+  <li (click)="onSelec(department)" [class.selected]='isSelected(department)' *ngFor='let department of departments'><span
+      class="badge">{{department.id}}</span>{{department.name}}</li>
+</ul>
+<ul class="heroes">
+  <li *ngFor='let noob of noobs' (click)="onSelects(noob)">
+    <span class="badge">{{noob.id}}</span> {{noob.name}}
+  </li>
+</ul>
+<!-- <div>
+      <input [(ngModel)]="selectedNoob.id" placeholder="id">
+      <input [(ngModel)]="selectedNoob.name" placeholder="name">
+    </div> -->
+<h3>Table Ex</h3>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td class="first">Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td class="first">Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td class="first">John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+
+
+
+<table border="1">
+    <tr>
+        <th>
+          <table border="0">
+            <tr>
+              <th>Firstname</th>
+            </tr>
+          </table>
+        </th>
+        
+        <th>
+          <table border="0">
+            <tr>
+              <th>Firstname</th>
+            </tr>
+          </table>
+        </th>
+        <th>
+            <table border="0">
+              <tr>
+                <th>Firstname</th>
+              </tr>
+            </table>
+          </th>
+        
+      </tr>
+    <tr>
+        <td>
+            <table border="0">
+                <tr>
+                    <td>one</td>
+                </tr>
+                <tr>
+                    <td>one</td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table border="0" class="hide">
+                <tr>
+                    <td>two</td>
+                </tr>
+                <tr>
+                    <td>two</td>
+                </tr>
+            </table>
+        </td>
+        <td>
+            <table border="0">
+                <tr>
+                    <td>two</td>
+                </tr>
+                <tr>
+                    <td>two</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <table border="1">
+  <tr>
+    <th class="bord">
+      <table border="0">
+        <tr>
+          <th>Firstname</th>
+        </tr>
+      </table>
+    </th>
+    
+    <th class="abh bord">
+      <table border="0">
+        <tr>
+          <th>Firstname</th>
+        </tr>
+      </table>
+    </th>
+    
+  </tr>
+
+
+  <tr>
+    <td class="bord" >
+      <table border="0">
+        <tr>
+          <td class="first">one</td>
+        </tr>
+        <tr>
+          <td class="first">one</td>
+        </tr>
+        <tr>
+          <td class="first">one</td>
+        </tr>
+        <tr>
+          <td class="first">one</td>
+        </tr>
+
+      </table>
+    </td>
+   
+    <td class="abh bord" >
+      <table border="0">
+        <tr>
+          <td class="first">four</td>
+        </tr>
+        <tr>
+          <td class="first">four</td>
+        </tr>
+        <tr>
+          <td class="first">four</td>
+        </tr>
+        <tr>
+          <td class="first">four</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+</table> -->

@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+   guten {{ title }}!
+   
+  </h1>
+</div>
+<nav>
+  <a routerLink="/exforms" routerLinkActive="active" >Register</a>
+  <a [routerLink]="'/one'" routerLinkActive="active" (childEvent)="message=$event">One</a>
+  <a routerLink="/one-details" routerLinkActive="active">One list</a>
+</nav>
+<!-- <app-one (childEvent)="message=$event"></app-one>
+<app-one-details  [hero]="selectedHero"></app-one-details> -->
+<router-outlet ></router-outlet>
